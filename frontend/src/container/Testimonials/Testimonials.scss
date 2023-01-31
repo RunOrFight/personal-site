@@ -1,11 +1,6 @@
 .app__testimonials{
-    flex: 1;
-    width: 100%;
-    flex-direction: column;
-
     &-item{
         width: 60%;
-        min-height: 320px;
         background-color: var(--white-color);
         display: flex;
         padding: 2rem;

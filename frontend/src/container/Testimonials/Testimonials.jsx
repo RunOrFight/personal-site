@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
-import { AppWrap, MotionWrap } from "../../wrapper";
 import { client, urlFor } from "../../client";
 
 import "./Testimonials.scss";
+import Container from "../Container/Container";
 
 const Testimonial = () => {
   const [testimonials, setTestimonials] = useState([]);
@@ -89,8 +89,4 @@ const Testimonial = () => {
   );
 };
 
-export default AppWrap(
-  MotionWrap(Testimonial, "app__testimonials"),
-  "testimonials",
-  "app__primarybg"
-);
+export default Container(Testimonial, "app__primarybg", "testimonials");

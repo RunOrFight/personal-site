@@ -1,8 +1,8 @@
 import React from "react";
-import { motion } from "framer-motion";
 import { images } from "../../constants";
-import { AppWrap, MotionWrap } from "../../wrapper";
 import "./Header.scss";
+import { motion } from "framer-motion";
+import Container from "../Container/Container";
 
 const Header = () => {
   const circles = [images.flutter, images.redux, images.sass];
@@ -17,7 +17,7 @@ const Header = () => {
     }
   };
   return (
-    <div className='app__header app__flex'>
+    <div className='app__header-content'>
       <motion.div
         whileInView={{ x: [-100, 0], opacity: [0, 1] }}
         transition={{ duration: 0.5 }}
@@ -44,15 +44,7 @@ const Header = () => {
         className='app__header-img'>
         <img
           src={images.profile}
-          alt='profile_bg'
-        />
-
-        <motion.img
-          whileInView={{ scale: [0, 1] }}
-          transition={{ duration: 1, ease: "easeInOut" }}
-          src={images.circle}
-          alt='profile_circle'
-          className='overlay_circle'
+          alt='profile'
         />
       </motion.div>
 
@@ -75,8 +67,4 @@ const Header = () => {
   );
 };
 
-export default AppWrap(
-  MotionWrap(Header, "app__header"),
-  "home",
-  "app__primarybg"
-);
+export default Container(Header, "app__primarybg", "home");

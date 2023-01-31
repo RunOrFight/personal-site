@@ -2,11 +2,10 @@ import React, { useState, useEffect } from "react";
 import { AiFillEye, AiFillGithub } from "react-icons/ai";
 import { motion } from "framer-motion";
 
-import { AppWrap, MotionWrap } from "../../wrapper";
-
 import { client, urlFor } from "../../client";
 
 import "./Work.scss";
+import Container from "../Container/Container";
 
 const Work = () => {
   const filters = ["UI/UX", "Web App", "Mobile", "React JS", "All"];
@@ -42,10 +41,6 @@ const Work = () => {
 
   return (
     <>
-      <h2 className='head-text'>
-        My Creative <span>Portfolio</span> Section
-      </h2>
-
       <div className='app__work-filter'>
         {filters.map((item, index) => (
           <div
@@ -127,4 +122,10 @@ const Work = () => {
   );
 };
 
-export default AppWrap(MotionWrap(Work, "app__work"), "work", "app__primarybg");
+const WorkHeader = (
+  <h2 className='head-text'>
+    My Creative <span>Portfolio</span> Section
+  </h2>
+);
+
+export default Container(Work, "app__primarybg", "work", WorkHeader);

@@ -1,7 +1,10 @@
 .app__work {
-    flex: 1;
-    width: 100%;
+    width: 100vw;
     flex-direction: column;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    padding: 1rem 2rem;
   
   &-filter {
     display: flex;

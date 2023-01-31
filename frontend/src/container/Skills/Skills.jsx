@@ -8,6 +8,7 @@ import { AppWrap } from "../../wrapper";
 import { client, urlFor } from "../../client";
 
 import "./Skills.scss";
+import MotiomWrap from "../../wrapper/MotionWrap";
 
 const Skills = () => {
   const [experience, setExperience] = useState([]);
@@ -86,4 +87,8 @@ const Skills = () => {
   );
 };
 
-export default AppWrap(Skills, "skills");
+export default AppWrap(
+  MotiomWrap(Skills, "app__skills"),
+  "skills",
+  "app__whitebg"
+);

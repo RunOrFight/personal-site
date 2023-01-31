@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import Container from "../Container/Container";
 
 const Header = () => {
-  const circles = [images.flutter, images.redux, images.sass];
+  const circles = [images.react, images.redux, images.node];
   const scaleVariants = {
     whileInView: {
       scale: [0, 1],

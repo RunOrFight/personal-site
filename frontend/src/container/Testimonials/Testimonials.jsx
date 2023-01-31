@@ -21,7 +21,6 @@ const Testimonial = () => {
   }, []);
 
   const testimonial = testimonials[currentIndex];
-  console.log(testimonials.length);
 
   const handleClick = (index) => {
     setCurrentIndex(index);

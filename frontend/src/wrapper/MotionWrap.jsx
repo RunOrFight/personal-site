@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const MotiomWrap = (Component, classNames) =>
+const MotionWrap = (Component, classNames) =>
   function HOC() {
     return (
       <motion.div
@@ -13,4 +13,4 @@ const MotiomWrap = (Component, classNames) =>
     );
   };
 
-export default MotiomWrap;
+export default MotionWrap;

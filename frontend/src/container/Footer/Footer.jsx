@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { client } from "../../client";
-import { images } from "../../constants";
 import Container from "../Container/Container";
 
 import "./Footer.scss";
@@ -39,31 +38,6 @@ const Footer = () => {
   };
   return (
     <div className='app__footer-content'>
-      <div className='app__footer-cards'>
-        <div className='app__footer-card'>
-          <img
-            src={images.email}
-            alt='email'
-          />
-          <a
-            href='mailto:dragoinfury@gmail.com'
-            className='p-text'>
-            dragoinfury@gmail.com
-          </a>
-        </div>
-        <div className='app__footer-card'>
-          <img
-            src={images.mobile}
-            alt='mobile'
-          />
-          <a
-            href='tel:+375(25)542-56-17'
-            className='p-text'>
-            +375(25)542-56-17
-          </a>
-        </div>
-      </div>
-
       {!isFormSubmitted ? (
         <div className='app__footer-form app__flex'>
           <div className='app__flex'>

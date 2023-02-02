@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { HiMenuAlt4, HiX } from "react-icons/hi";
-import { motion } from "framer-motion";
 
 import "./Navbar.scss";
 
@@ -29,15 +28,14 @@ const Navbar = () => {
         <HiMenuAlt4 onClick={() => setToggle(true)} />
 
         {toggle && (
-          <motion.div
-            whileInView={{ x: [300, 0] }}
-            transition={{ duration: 0.85, ease: "easeInOut" }}>
+          <div>
             <HiX onClick={() => setToggle(false)} />
 
             <ul>
               {links.map((item) => (
                 <li key={item}>
                   <a
+                    onClick={() => setToggle(false)}
                     href={`#${item}`}
                     className='app__link'>
                     {item}
@@ -45,9 +43,19 @@ const Navbar = () => {
                 </li>
               ))}
             </ul>
-          </motion.div>
+          </div>
         )}
       </div>
+      <a
+        href='tel:+375(25)542-56-17'
+        className='p-text'>
+        +375(25)542-56-17
+      </a>
+      <a
+        href='mailto:dragoinfury@gmail.com'
+        className='p-text'>
+        dragoinfury@gmail.com
+      </a>
     </nav>
   );
 };

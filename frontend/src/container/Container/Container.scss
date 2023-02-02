@@ -2,8 +2,11 @@
     height: 100vh;
     width: 100%;
     padding: calc(1rem + 70px) 2rem 1rem;
-
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media screen and (max-width: 800px){
+        height: auto;
+    }
 }

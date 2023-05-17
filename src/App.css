@@ -1,0 +1,22 @@
+.app__container {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+
+header {
+    height: 70px;
+    width: 100%;
+    background-color: blueviolet;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    font-size: xx-large;
+    font-weight: bolder;
+}
